@@ -26,9 +26,20 @@ const produtos = [
 const listarValor = (valorMinimo, valorMaximo) => {
   for (let i = 0; i < produtos.length; i++) {
     if (produtos[i].valor >= valorMinimo && produtos[i].valor <= valorMaximo) {
+    console.log(produtos[i]);
+    }
+  }
+};
+
+const listarCategoria = (categoria) => {
+  for (let i = 0; i < produtos.length; i++) {
+    if (categoria == produtos[i].categoria) {
+
       console.log(produtos[i]);
     }
   }
 };
 
 listarValor(7, 1000);
+listarCategoria("Escolar");
+
