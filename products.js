@@ -1,34 +1,34 @@
-let scanf = require('scanf');
+let scanf = require("scanf");
 
 const produtos = [
-    {
-        nome: "Notebook",
-        categoria: "Eletrônico",
-        valor: 1999.99
-    },
-    {
-        nome: "Impressora",
-        categoria: "Eletrônico",
-        valor: 999.99
-    },
-    {
-        nome: "Caneta BIC",
-        categoria: "Escolar",
-        valor: 0.50
-    },
-    {
-        nome: "Lapiseira Pentel",
-        categoria: "Escolar",
-        valor: 7.50
-    },
-]
+  {
+    nome: "Notebook",
+    categoria: "Eletrônico",
+    valor: 1999.99,
+  },
+  {
+    nome: "Impressora",
+    categoria: "Eletrônico",
+    valor: 999.99,
+  },
+  {
+    nome: "Caneta BIC",
+    categoria: "Escolar",
+    valor: 0.5,
+  },
+  {
+    nome: "Lapiseira Pentel",
+    categoria: "Escolar",
+    valor: 7.5,
+  },
+];
 
+const listarValor = (valorMinimo, valorMaximo) => {
+  for (let i = 0; i < produtos.length; i++) {
+    if (produtos[i].valor >= valorMinimo && produtos[i].valor <= valorMaximo) {
+      console.log(produtos[i]);
+    }
+  }
+};
 
-function listar() {
-    produtos.forEach(p => {
-        console.log(p)
-    })
-}
-
-
-
+listarValor(7, 1000);
